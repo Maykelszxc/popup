@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Petbook</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <button onclick="openLoginForm()">Log In</button>
+        <button onclick="openSignupForm()">Sign Up</button>
+    </div>
+
+    <!LOGIN>
+    <div id="loginForm" class="modal">
+        <form class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeLoginForm()">&times;</span>
+                <h2>Login Form</h2>
+            </div>
+
+          <div class="modal-body">
+            <label for="email" id="email-label"><b>Email</b>
+            <input id="email" placeholder="Enter Email" type="text" required></label>
+
+            <label for="psw"><b>Password</b>
+            <input id="psw" placeholder="Enter Password" type="password" required></label>
+
+            <button type="Submit">Login</button>
+
+           </div>
+
+            <div class="modal-footer">
+              <button type="button" class="cancelbtn" onclick="closLoginForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!SIGN UP>
+    <div id="signupForm" class="modal">
+        <form class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeSignupForm()">&times;</span>
+                <h2>Sign Up</h2>
+            </div>
+            <div class="modal-body">
+
+                <label for="signup"><b>Email</b>
+                <input id="signup" placeholder="Enter Email" type="text" required></label>
+
+                <label for="signpsw"><b>Password</b>
+                <input id="signpsw" placeholder="Enter Password" type="password" required></label>
+
+                <label for="psw-repeat"><b>Repeat Password</b>
+                <input id="psw-repeat" placeholder="Repeat Password" name="password"></label>
+
+                <button type="submit">Sign Up</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="cancelbtn" onclick="closeSignupForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
